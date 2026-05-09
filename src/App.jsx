@@ -10,9 +10,16 @@ export default function App() {
 
   function handleLimitChange(e) {
     setLimit(e.target.value);
+    resetScore();
+  }
+
+  function resetScore() {
+    setScore(0);
+    setBestScore(0);
   }
 
   function resetGame() {
+    resetScore();
     setGameID(gameID + 1);
   }
 
