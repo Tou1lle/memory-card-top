@@ -35,4 +35,15 @@ function getSumPicked(arr) {
     }, 0)
 }
 
-export { fetchCards, getSumPicked };
+/**
+ * @param {number} id Provided ID from the DOM element
+ * @param {Array} arr Array of card objects
+ * @returns The found card object
+ */
+function getCard(id, arr) {
+  return arr.find(card => {
+    return parseInt(card.id) === parseInt(id);
+  })
+}
+
+export { fetchCards, getSumPicked, getCard };
