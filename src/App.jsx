@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header.jsx';
+import Gameboard from './components/Gameboard.jsx';
 
 export default function App() {
   const [score, setScore] = useState(0);
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <div>
       <Header score={score} bestScore={bestScore} limit={limit} onLimitChange={handleLimitChange}/>
+      <Gameboard limit={limit} />
     </div>
   )
 }
