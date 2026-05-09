@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { PokemonImages } from './App.jsx'
+import { PokemonSingleImage, PokemonMultipleImages } from './Sandbox.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PokemonImages />
+    <PokemonSingleImage />
+    <PokemonMultipleImages />
   </StrictMode>,
 )
