@@ -68,14 +68,27 @@ function PokemonMultipleImages() {
     return () => {
       controller.abort();
     }
-  }, [])
+  }, [limit])
+
+  const handleDifficultyChange = (e) => {
+    if (e.currentTarget.value === "10") setLimit(10);
+    if (e.currentTarget.value === "15") setLimit(15);
+    if (e.currentTarget.value === "25") setLimit(25);
+  }
 
   return (
-    <ul>
-      {
-        pokemons.map(pokemon => <li key={pokemon.id}>{pokemon.name}</li>)
-      }
-    </ul>
+    <div>
+      <select name="limit" id="limit" defaultValue={10} onChange={handleDifficultyChange}>
+        <option value="10">Easy</option>
+        <option value="15">Medium</option>
+        <option value="25">Hard</option>
+      </select>
+      <ul>
+        {
+          pokemons.map(pokemon => <li key={pokemon.id}>{pokemon.name}</li>)
+        }
+      </ul>
+    </div>
   )
 }
 
