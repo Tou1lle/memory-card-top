@@ -3,4 +3,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }

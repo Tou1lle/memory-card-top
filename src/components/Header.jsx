@@ -3,7 +3,10 @@ import "./../styles/header.css"
 function Header({score, bestScore, limit, onLimitChange}) {
   return (
     <header>
-      <h1>Memory Card Game</h1>
+      <div>
+        <h1>Memory Card Game</h1>
+        <p>Catch every Pokemon exactly once! Catch them again and you LOSE!</p>
+      </div>
       <div>
         <p>Current Score: {score}</p>
         <p>Best Score: {bestScore}</p>

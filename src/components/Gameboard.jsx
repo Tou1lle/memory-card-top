@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchCards, getSumPicked, getCard } from "./helper";
 import _ from "lodash"
 
-function Gameboard({limit}) {
+function Gameboard({limit, setScore, setBestScore, resetGame}) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -23,12 +23,23 @@ function Gameboard({limit}) {
   function handlePick(e) {
     const id = e.currentTarget.dataset.id;
     const card = getCard(id, cards)
-    // Update the card to be picked
+    if (!card.picked) handlePickPositive(card, id);
+    if (card.picked) handlePickNegative();
+  }
+
+  function handlePickPositive(card, id) {
+    // Update the clicked card to be picked
     const updatedCard = {...card, picked: true};
-    // Update state with new picked card to trigger rerender
-    setCards(prevCards => prevCards.map(item => {
-      return item.id == id ? updatedCard : item;
-    }))
+    // Create copy of cards if the updated value (important to use for setting score)
+    const updatedCards = cards.map(item => item.id == id ? updatedCard : item) 
+    const score = getSumPicked(updatedCards);
+    
+    setCards(updatedCards)
+    setScore(score)
+  }
+
+  function handlePickNegative() {
+    resetGame();
   }
 
   return (
