@@ -40,14 +40,14 @@ function Gameboard({limit, setScore, bestScore, setBestScore}) {
   function handlePickNegative() {
     const updatedCards = cards.map(item => ({...item, picked: false}));
     const score = getSumPicked(updatedCards);
-    
+
     setCards(updatedCards);
     setScore(score);
   }
 
   return (
     <main>
-      {cards.map(item => (
+      {_.shuffle(cards).map(item => (
         <div key={item.id} data-id={item.id} onClick={handlePick}>
           <img src={item.image} alt={"Image of a pokemon named " + item.name} />
           <h2>{_.capitalize(item.name)}</h2>
