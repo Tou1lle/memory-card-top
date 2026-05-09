@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchCards, getSumPicked, getCard } from "./helper";
 import _ from "lodash"
 
-function Gameboard({limit, setScore, setBestScore, resetGame}) {
+function Gameboard({limit, setScore, bestScore, setBestScore, resetGame}) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ function Gameboard({limit, setScore, setBestScore, resetGame}) {
     
     setCards(updatedCards)
     setScore(score)
+    if (score > bestScore) setBestScore(score);
   }
 
   function handlePickNegative() {

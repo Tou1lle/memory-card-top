@@ -19,8 +19,20 @@ export default function App() {
 
   return (
     <div>
-      <Header score={score} bestScore={bestScore} limit={limit} onLimitChange={handleLimitChange}/>
-      <Gameboard key={gameID} limit={limit} setScore={setScore} setBestScore={setBestScore} resetGame={() => resetGame()}/>
+      <Header 
+        score={score} 
+        bestScore={bestScore} 
+        limit={limit} 
+        onLimitChange={handleLimitChange}
+      />
+      <Gameboard 
+        key={gameID} 
+        limit={limit} 
+        setScore={setScore} 
+        bestScore={bestScore} 
+        setBestScore={setBestScore} 
+        resetGame={() => resetGame()}
+      />
     </div>
   )
 }
