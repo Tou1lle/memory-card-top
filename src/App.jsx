@@ -13,7 +13,6 @@ export default function App() {
   }
 
   function resetGame() {
-    setScore(0);
     setGameID(gameID + 1);
   }
 
@@ -31,7 +30,6 @@ export default function App() {
         setScore={setScore} 
         bestScore={bestScore} 
         setBestScore={setBestScore} 
-        resetGame={() => resetGame()}
       />
     </div>
   )
