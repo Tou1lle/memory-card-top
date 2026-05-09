@@ -12,7 +12,7 @@ async function fetchCards(limit, signal) {
         name: item.name,
         id: index + 1,
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`,
-        picked: true,
+        picked: false,
       }
     });
 
