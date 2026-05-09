@@ -1,13 +1,13 @@
 import "./../styles/header.css"
 
-function Header({score, bestScore, limit}) {
+function Header({score, bestScore, limit, onLimitChange}) {
   return (
     <header>
       <h1>Memory Card Game</h1>
       <div>
         <p>Current Score: {score}</p>
         <p>Best Score: {bestScore}</p>
-        <select name="limit" id="limit" defaultValue={limit}>
+        <select name="limit" id="limit" onChange={onLimitChange} value={limit}>
           <option value="10">Easy</option>
           <option value="15">Medium</option>
           <option value="25">Hard</option>
