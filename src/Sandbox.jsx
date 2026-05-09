@@ -85,7 +85,13 @@ function PokemonMultipleImages() {
       </select>
       <ul>
         {
-          pokemons.map(pokemon => <li key={pokemon.id}>{pokemon.name}</li>)
+          pokemons.map(pokemon => {
+            return (
+              <li key={pokemon.id}>
+                <img src={pokemon.image} alt="Image of a Pokemon" />
+                {pokemon.name}
+              </li>)
+          })
         }
       </ul>
     </div>
