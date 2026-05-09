@@ -1,6 +1,6 @@
 import "./../styles/gameboard.css"
 import { useEffect, useState } from "react";
-import { fetchCards } from "./helper";
+import { fetchCards, getSumPicked } from "./helper";
 import _ from "lodash"
 
 function Gameboard({limit}) {
@@ -19,6 +19,8 @@ function Gameboard({limit}) {
       controller.abort();
     }
   }, [limit])
+
+  console.log(getSumPicked(cards));
 
   return (
     <main>
