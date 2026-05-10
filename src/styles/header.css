@@ -15,6 +15,7 @@ header div p {
 
 header div p.instructions {
   margin: 0 0 0 20px;
+  max-width: 350px;
 }
 
 header div h1 {
@@ -32,4 +33,43 @@ header div h1 {
 .header-sidebar p {
   font-size: 20px;
   font-weight: 650;
+}
+
+select {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: 550;
+}
+
+.easy-select {
+  border: 2px solid var(--easy);
+}
+
+.medium-select {
+  border: 2px solid var(--medium);
+}
+
+.hard-select {
+  border: 2px solid var(--hard);
+}
+
+.easy-option,
+.medium-option,
+.hard-option {
+  font-weight: 550;
+}
+
+.easy-option,
+.easy-select {
+  color: var(--easy);
+}
+
+.medium-option,
+.medium-select {
+  color: var(--medium);
+}
+
+.hard-option,
+.hard-select {
+  color: var(--hard);
 }

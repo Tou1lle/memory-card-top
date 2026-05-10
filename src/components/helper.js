@@ -46,4 +46,15 @@ function getCard(id, arr) {
   })
 }
 
-export { fetchCards, getSumPicked, getCard };
+
+function setDifficultyColor(element) {
+  const selector = element.target;
+  const difficulty = element.target.value;
+  const difficultyClass = difficulty == 10 ? "easy-select" 
+                        : difficulty == 15 ? "medium-select" : "hard-select"; 
+
+  selector.classList.remove("easy-select", "medium-select", "hard-select");
+  selector.classList.add(difficultyClass);
+}
+
+export { fetchCards, getSumPicked, getCard, setDifficultyColor };
