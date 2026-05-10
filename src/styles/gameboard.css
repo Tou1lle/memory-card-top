@@ -1,11 +1,12 @@
 main {
-  padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   background: linear-gradient(to bottom, #2C2C30 40%, #EDCE5E 100%);
   background: var(--pikachu-black);
   padding: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .card {

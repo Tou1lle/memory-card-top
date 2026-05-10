@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header.jsx';
 import Gameboard from './components/Gameboard.jsx';
+import Footer from './components/Footer.jsx';
 
 export default function App() {
   const [score, setScore] = useState(0);
@@ -31,6 +32,7 @@ export default function App() {
         bestScore={bestScore} 
         setBestScore={setBestScore} 
       />
+      <Footer />
     </div>
   )
 }
