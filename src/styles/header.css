@@ -5,12 +5,14 @@ header {
   background-position: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   font-family: myPokemon;
+  background-color: var(--pikachu-black);
 }
 
 header div p {
   font-family: var(--basic-font);
+  color: var(--pikachu-dimmed-yellow);
 }
 
 header div p.instructions {
@@ -21,6 +23,7 @@ header div p.instructions {
 header div h1 {
   font-size: 50px;
   margin: 20px 0 10px 20px;
+  color: var(--pikachu-shiny-yellow);
 }
 
 .header-sidebar {

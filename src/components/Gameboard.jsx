@@ -48,10 +48,11 @@ function Gameboard({limit, setScore, bestScore, setBestScore}) {
   return (
     <main>
       {_.shuffle(cards).map(item => (
-        <div key={item.id} data-id={item.id} onClick={handlePick}>
-          <img src={item.image} alt={"Image of a pokemon named " + item.name} />
+        <div key={item.id} data-id={item.id} onClick={handlePick} className="card">
+          <div className="image-container">
+            <img src={item.image} alt={"Image of a pokemon named " + item.name} />
+          </div>
           <h2>{_.capitalize(item.name)}</h2>
-          <p>{item.picked.toString()}</p>
         </div>
       ))}
     </main>
