@@ -1,0 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: myPokemon;
+  src: url("./../assets/fonts/PocketMonk-15ze.ttf");
+}
+
+:root {
+  --basic-font: Arial, Helvetica, sans-serif;
+}

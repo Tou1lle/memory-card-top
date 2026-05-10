@@ -6,4 +6,30 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  font-family: myPokemon;
+}
+
+header div p {
+  font-family: var(--basic-font);
+}
+
+header div p.instructions {
+  margin: 0 0 0 20px;
+}
+
+header div h1 {
+  font-size: 50px;
+  margin: 20px 0 10px 20px;
+}
+
+.header-sidebar {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-sidebar p {
+  font-size: 20px;
+  font-weight: 650;
 }
