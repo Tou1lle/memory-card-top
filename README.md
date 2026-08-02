@@ -1,16 +1,40 @@
-# React + Vite
+# ⚛️Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A memory card game where a user must pick all cards uniquely (meaning no card can be picked twice) to win
+the game.
+This project is from the React course of The Odin Project - [instructions](https://www.theodinproject.com/lessons/node-path-react-new-memory-card).
 
-Currently, two official plugins are available:
+## 🎯Learning Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Be comfortable using useState hook
+- Start using useEffect hook
+- Fetch data in React
+- Be more comfortable with React
 
-## React Compiler
+## ⚙️Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Changing difficulties. Based on that the number of cards increases/decreases
+- Keeping track of score
+- Score reset when a card is picked again
+- Randomization after every pick
 
-## Expanding the ESLint configuration
+## 🛠️Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- HTML
+- CSS
+- JS
+- React
+- Vite
+- NPM
+
+## 🧱Project Structure
+
+The project follows React project structure with different folders for styles, components and assets.
+
+## 📝Notes
+
+The game is simple and the user just starts playing on page load. The score updates after every pick, there is no restart button.
+
+## 🌐Webpage URL
+
+The game can be opened from this [link](https://memory-card-top-touille.netlify.app/).
